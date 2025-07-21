@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import SearchBox from '@/components/molecules/SearchBox';
+import Head from "next/head";
+import SearchBox from "@/components/molecules/SearchBox";
 
 export default function Home() {
   return (
