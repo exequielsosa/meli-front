@@ -1,12 +1,13 @@
 import "@/styles/globals.scss";
-import { SearchBox } from "@/components/molecules";
+import { MainLayout } from "@/components/templates";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <SearchBox />
-      <Component {...pageProps} />
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
     </>
   );
 }
