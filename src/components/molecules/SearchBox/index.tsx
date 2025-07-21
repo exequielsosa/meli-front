@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./styles.module.scss";
 import { BarTemplate } from "@/components/templates";
 
-export default function SearchBox() {
+export const SearchBox = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();
 
@@ -41,4 +41,6 @@ export default function SearchBox() {
       </div>
     </BarTemplate>
   );
-}
+};
+
+export default SearchBox;
