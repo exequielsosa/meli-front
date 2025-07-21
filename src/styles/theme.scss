@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../../public/fonts/proximanova_light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../../public/fonts/proximanova_regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../../public/fonts/proximanova_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// TypoGlobal
+$font-family: 'Proxima Nova', sans-serif;
+
+
+// Main Colors
+$color-primary: #ffe600;
+$color-text: #333;
+$color-border: #ddd;
+$color-background: #fff;
+$color-background-page: #ebebeb;
+$color-hover: #f5f5f5;
+$color-error: #e53935;
+$color-placeholder: rgba(0,0,0,0.55);
+
+// Typos
+$font-family: 'Helvetica Neue', Arial, sans-serif;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 34px;

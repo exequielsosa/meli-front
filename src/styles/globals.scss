@@ -1,0 +1,10 @@
+@import './theme';
+
+
+body {
+  font-family: $font-family;
+  background-color: $color-background-page;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+}

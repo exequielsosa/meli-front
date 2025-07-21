@@ -1,0 +1,26 @@
+@import '@/styles/theme';
+
+
+.barTemplate {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: $color-primary;
+    padding: $spacing-sm 0;
+
+}
+
+.barTemplateInside {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+    padding-right: $spacing-sm;
+}
+
+@media (max-width: 600px) {
+    .barTemplateInside {
+        gap: $spacing-md;
+    }
+}
