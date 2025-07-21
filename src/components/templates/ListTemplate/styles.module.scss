@@ -1,0 +1,20 @@
+@import "../../../styles/theme.scss";
+
+
+.listTemplate {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 0;
+
+}
+
+.listTemplateInside {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;    
+    padding-right: $spacing-sm;
+    padding-left: $spacing-sm;
+}
+

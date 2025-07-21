@@ -17,6 +17,7 @@ export function useSearchResults(query: string) {
         const data = await res.json();
         setItems(data.items);
         setCategories(data.categories);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message || "Error inesperado");
       } finally {

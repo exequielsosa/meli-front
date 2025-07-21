@@ -1,0 +1,163 @@
+@import "../../../styles/theme.scss";
+
+.card {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 12px 12px 32px 12px;
+    border-radius: 4px;
+    gap: 24px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 259px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: "Proxima Nova";
+    margin: 30px 0 6px 0;
+}
+
+.seller {
+    font-size: 14px;
+    color: $color-placeholder;
+    margin: 0;
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    padding-bottom: 25px;
+}
+
+.price {
+    font-size: 24px;
+    color: $color-price;
+    font-weight: 400;
+    font-family: "Proxima Nova";
+    margin: 0;
+}
+
+.regular {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: $color-placeholder;
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    margin: 0;
+}
+
+.installments {
+    font-size: 14px;
+    color: $color-free-shipping;
+    margin: 0;
+    font-family: "Proxima Nova";
+    font-weight: 400;
+}
+
+.containerPriceDiscount {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+
+.shipping {
+    font-size: 14px;
+    color: $color-free-shipping;
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.used {
+    font-size: 14px;
+    color: $color-placeholder;
+    font-family: "Proxima Nova";
+    font-weight: 400;
+    margin: 0;
+}
+
+.containerPriceAndDiscount {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.discount {
+    color: $color-free-shipping;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .image {
+        width: 129px;
+        height: 125px;
+        object-fit: contain;
+    }
+
+    .card {
+        padding: 6px 8px 16px 8px;
+        gap: 8px;
+    }
+
+    .title {
+        font-size: 16px;
+        margin: 15px 0 6px 0;
+    }
+
+    .seller {
+        font-size: 12px;
+        padding-bottom: 12px;
+    }
+
+    .price {
+        font-size: 20px;
+
+    }
+
+    .regular {
+        font-size: 12px;
+
+    }
+
+    .containerPriceDiscount {
+        margin-bottom: 12px;
+    }
+
+    .containerPriceAndDiscount {
+        gap: 8px;
+    }
+
+    .discount {
+        font-size: 12px;
+    }
+
+    .installments {
+        font-size: 12px;
+
+    }
+
+    .shipping {
+        font-size: 12px;
+        padding-bottom: 12px;
+    }
+
+    .used {
+        font-size: 12px;
+    }
+}

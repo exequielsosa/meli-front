@@ -32,6 +32,8 @@ $color-background-page: #ebebeb;
 $color-hover: #f5f5f5;
 $color-error: #e53935;
 $color-placeholder: rgba(0,0,0,0.55);
+$color-price: rgba(0, 0, 0, 0.9);
+$color-free-shipping: #00a650;
 
 // Typos
 $font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -39,6 +41,7 @@ $font-family: 'Helvetica Neue', Arial, sans-serif;
 // Spacing
 $spacing-xs: 4px;
 $spacing-sm: 8px;
+$spacing-list: 12px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
 $spacing-xl: 34px;
