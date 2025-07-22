@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mercado Libre Challenge</title>
+        <title>Mercado Libre Argentina</title>
       </Head>
     </>
   );

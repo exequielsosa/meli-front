@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ItemDetailView } from "@/components/organisms";
 import { Loader } from "@/components/atoms";
 import { ItemDetail } from "@/types/itemDetail";
+import Head from "next/head";
 
 export default function ItemDetailPage() {
   const router = useRouter();
@@ -35,5 +36,13 @@ export default function ItemDetailPage() {
 
   if (!hasTriedLoading) return <Loader />;
 
-  return item ? <ItemDetailView item={item} /> : null;
+  return item ? (
+    <>
+      <Head>
+        <title>{item.title} | MercadoLibre</title>
+        <meta name="description" content={`Detalles de ${item.title}`} />
+      </Head>
+      <ItemDetailView item={item} />
+    </>
+  ) : null;
 }
