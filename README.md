@@ -11,6 +11,7 @@ Este proyecto es la implementación del **frontend** del buscador de productos e
 
 ## 📁 Estructura principal
 
+```
 src/
 ├── components/ # Componentes divididos por atomic design
 │ ├── atoms/
@@ -21,6 +22,7 @@ src/
 ├── types/ # Tipos reutilizables
 ├── utils/ # Utilidades
 ├── Hooks/ # Custom Hooks
+```
 
 
 ## 🧪 Funcionalidades implementadas
