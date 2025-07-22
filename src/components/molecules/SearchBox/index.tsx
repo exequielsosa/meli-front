@@ -1,11 +1,13 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./styles.module.scss";
 import { BarTemplate } from "@/components/templates";
+import WelcomeTooltip from "../WelcomeTooltip";
 
 export const SearchBox = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();
+  const searchBoxRef = useRef<HTMLDivElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,17 +29,24 @@ export const SearchBox = () => {
         />
       </div>
       <div className={styles.containerForm}>
-        <form onSubmit={handleSubmit} className={styles.searchBox}>
+        <form
+          onSubmit={handleSubmit}
+          className={styles.searchBox}
+          ref={searchBoxRef}
+        >
           <input
             type="text"
             placeholder="Buscar productos, marcas y más..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <div className={styles.icon} onClick={handleSubmit}>
-            <img src="/assets/search.png" alt="Buscar" />
+          <div className={styles.iconWrapper}>
+            <div className={styles.icon} onClick={handleSubmit}>
+              <img src="/assets/search.png" alt="Buscar" />
+            </div>
           </div>
         </form>
+        <WelcomeTooltip anchorRef={searchBoxRef} />
       </div>
     </BarTemplate>
   );
