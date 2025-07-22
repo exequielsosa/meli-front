@@ -61,3 +61,12 @@ Abrí http://localhost:3000 en tu navegador para verlo en acción.
 
 📌 Nota
 Este frontend consume datos desde una API local que debe estar corriendo en paralelo. Verificá que el backend esté disponible para que la búsqueda y el detalle funcionen correctamente.
+
+IMAGENES:
+<img width="1486" height="321" alt="image" src="https://github.com/user-attachments/assets/b02b96fa-0778-44d0-8841-933fe68adbde" />
+<img width="1475" height="898" alt="image" src="https://github.com/user-attachments/assets/f480fc51-6696-4ba7-a4ea-f6cd0e770044" />
+<img width="1408" height="899" alt="image" src="https://github.com/user-attachments/assets/1f40ef0e-4510-48d2-96f9-8f3e54f42055" />
+
+
+
+
