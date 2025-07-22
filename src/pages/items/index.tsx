@@ -18,6 +18,16 @@ export default function ItemsPage() {
     <>
       <Head>
         <title>{search} | MercadoLibre</title>
+        <meta
+          name="description"
+          content={`Encontrá ${search} entre los mejores productos. Precios bajos y envío gratis.`}
+        />
+        <meta property="og:title" content={`${search} | MercadoLibre`} />
+        <meta
+          property="og:description"
+          content={`Resultados para ${search}. Envío gratis y cuotas disponibles.`}
+        />
+        <meta name="robots" content="index, follow" />
       </Head>
       <ProductList items={items} />
     </>

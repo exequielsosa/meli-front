@@ -40,7 +40,17 @@ export default function ItemDetailPage() {
     <>
       <Head>
         <title>{item.title} | MercadoLibre</title>
-        <meta name="description" content={`Detalles de ${item.title}`} />
+        <meta
+          name="description"
+          content={`Compra ${item.title} al mejor precio. Envío gratis y cuotas disponibles.`}
+        />
+        <meta property="og:title" content={`${item.title} | MercadoLibre`} />
+        <meta
+          property="og:description"
+          content={`Compra ${item.title} con envío gratis y cuotas. ¡Entrá ahora!`}
+        />
+        <meta property="og:image" content={item.pictures[0]} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <ItemDetailView item={item} />
     </>
