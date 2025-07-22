@@ -8,4 +8,5 @@ export interface PropsProductMainInfo {
   condition?: string;
   sold_quantity?: number;
   discount_price?: number | null;
+  warranty?: string;
 }

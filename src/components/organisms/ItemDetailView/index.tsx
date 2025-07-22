@@ -36,6 +36,7 @@ export const ItemDetailView = ({ item }: { item: ItemDetailViewProps }) => {
               mainColor={mainColor}
               condition={item.condition}
               sold_quantity={item.sold_quantity}
+              warranty={item.warranty}
             />
           </div>
           {item.description && <ProductDescription text={item.description} />}

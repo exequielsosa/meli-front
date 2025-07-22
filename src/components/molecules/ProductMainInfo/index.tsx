@@ -13,6 +13,7 @@ export const ProductMainInfo = ({
   condition,
   sold_quantity,
   discount_price,
+  warranty,
 }: PropsProductMainInfo) => {
   console.log("ProductMainInfo rendered", condition);
   return (
@@ -46,6 +47,11 @@ export const ProductMainInfo = ({
       {mainColor && (
         <p className={styles.color}>
           Color: <span className={styles.colorValue}>{mainColor}</span>
+        </p>
+      )}
+      {warranty && (
+        <p className={styles.color}>
+          Garantía: <span className={styles.colorValue}>{warranty}</span>
         </p>
       )}
     </div>

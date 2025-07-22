@@ -7,7 +7,7 @@ import WelcomeTooltip from "../WelcomeTooltip";
 export const SearchBox = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();
-  const searchBoxRef = useRef<HTMLDivElement | null>(null);
+  const searchBoxRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

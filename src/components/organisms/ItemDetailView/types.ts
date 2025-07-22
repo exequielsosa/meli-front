@@ -5,12 +5,13 @@ export interface ItemDetailViewProps {
     currency: string;
     amount: number;
     decimals: number;
-      regular_amount: number | null;    
+    regular_amount: number | null;
   };
   pictures: string[];
   condition: "new" | "used" | string;
   free_shipping: boolean;
   sold_quantity?: number;
+  warranty?: string;
   installments: string;
   description: string;
   seller?: string;

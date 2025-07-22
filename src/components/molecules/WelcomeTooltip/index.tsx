@@ -1,11 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.scss";
+import { PropsWelcomeTooltip } from "./types";
 
-interface Props {
-  anchorRef: React.RefObject<HTMLElement>;
-}
-
-const WelcomeTooltip = ({ anchorRef }: Props) => {
+const WelcomeTooltip = ({ anchorRef }: PropsWelcomeTooltip) => {
   const [visible, setVisible] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const tooltipRef = useRef<HTMLDivElement | null>(null);
