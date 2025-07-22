@@ -14,7 +14,7 @@ export const SearchBox = () => {
 
   return (
     <BarTemplate>
-      <div className={styles.logoWrapper}>
+      <div className={styles.logoWrapper} onClick={() => router.push("/")}>
         <img
           src="/assets/logo_large_25years.png"
           alt="Logo grande"
@@ -34,7 +34,7 @@ export const SearchBox = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <div className={styles.icon}>
+          <div className={styles.icon} onClick={handleSubmit}>
             <img src="/assets/search.png" alt="Buscar" />
           </div>
         </form>
