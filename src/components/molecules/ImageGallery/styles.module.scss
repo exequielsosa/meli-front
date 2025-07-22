@@ -1,0 +1,63 @@
+@import "../../../styles/theme.scss";
+
+.gallery {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &.active {
+      border: 2px solid #3483fa;
+    }
+  }
+}
+
+.main img {
+  width: 400px;
+  height: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    order: 2;
+  }
+
+  .main img {
+    width: 220px;
+    height: 280px;
+    object-fit: contain;
+    order: 1;
+  }
+
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+      width: 36px;
+      height: 36px;
+
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    order: 2;
+  }
+}

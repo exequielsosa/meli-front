@@ -1,37 +1,39 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { formatPrice } from "@/utils/formatPrice";
+import { ItemDetailView } from "@/components/organisms";
+import { Loader } from "@/components/atoms";
+import { ItemDetail } from "@/types/itemDetail";
 
 export default function ItemDetailPage() {
-  const { id } = useRouter().query;
-  const [item, setItem] = useState(null);
+  const router = useRouter();
+  const id = typeof router.query.id === "string" ? router.query.id : undefined;
+
+  const [item, setItem] = useState<ItemDetail | null>(null);
+  const [hasTriedLoading, setHasTriedLoading] = useState(false);
 
   useEffect(() => {
     if (id) {
       fetch(`/api/items/${id}`)
         .then((res) => res.json())
-        .then((data) => setItem(data.item));
+        .then((data) => {
+          if (data?.item) {
+            setItem(data.item);
+          } else {
+            setItem(null);
+          }
+        })
+        .catch(() => setItem(null))
+        .finally(() => setHasTriedLoading(true));
     }
   }, [id]);
 
-  if (!item) return <p>Cargando...</p>;
+  useEffect(() => {
+    if (hasTriedLoading && !item) {
+      router.push("/");
+    }
+  }, [hasTriedLoading, item, router]);
 
-  return (
-    <div>
-      <h1>{item.title}</h1>
-      <img src={item.pictures[0]} alt={item.title} width={400} />
-      <p>{formatPrice(item.price.amount)}</p>
-      <p>{item.installments}</p>
-      <p>{item.free_shipping ? "Envío gratis" : "Sin envío gratis"}</p>
-      <p>Condición: {item.condition}</p>
-      <p>Vendidos: {item.sold_quantity}</p>
-      <p>Descripción: {item.description}</p>
-      {item.attributes.find((attr) => attr.id === "MAIN_COLOR") && (
-        <p>
-          Color:{" "}
-          {item.attributes.find((attr) => attr.id === "MAIN_COLOR")?.value_name}
-        </p>
-      )}
-    </div>
-  );
+  if (!hasTriedLoading) return <Loader />;
+
+  return item ? <ItemDetailView item={item} /> : null;
 }

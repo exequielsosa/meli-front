@@ -1,0 +1,37 @@
+@import "../../../styles/theme.scss";
+
+.description {
+  margin-top: 40px;
+  border-top: 1px solid $color-border;
+  padding-top: 28px;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+    color: $color-breadcrumb;
+    font-family: "Proxima Nova";
+  }
+
+  p {
+    font-size: 18px;
+    color: $color-breadcrumb;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Proxima Nova";
+
+    
+  }
+
+  @media (max-width: 600px) {
+    padding-top: 16px;
+    h3 {
+      font-size: 16px;
+      margin: 0 0 12px 0;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

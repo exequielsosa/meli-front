@@ -1,0 +1,53 @@
+@import "../../../styles/theme.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "Proxima Nova";
+  color: $color-breadcrumb;
+  font-weight: 300;
+  gap: 0px;
+}
+
+
+.id {
+  color: $color-breadcrumb;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.idValue {
+  font-weight: 400;
+}
+
+.back {
+  background: none;
+  border: none;
+  color: $color-link;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Proxima Nova";
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  .id {
+    font-size: 12px;
+  }
+}

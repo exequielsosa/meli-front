@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useSearchResults } from "@/hooks/useSearchResults";
 import { ProductList } from "@/components/organisms";
+import { Loader, NoResults, ErrorPage } from "@/components/atoms";
 
 export default function ItemsPage() {
   const router = useRouter();
@@ -8,14 +9,9 @@ export default function ItemsPage() {
 
   const { items, loading, error } = useSearchResults(search);
 
-  if (!search) return <p>⚠️ Ingresá un término de búsqueda</p>;
-  if (loading) return <p>⏳ Cargando productos...</p>;
-  if (error) return <p>❌ Error: {error}</p>;
-  if (items.length === 0) return <p>😢 No se encontraron resultados.</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorPage />;
+  if (items.length === 0) return <NoResults />;
 
-  return (
-    <>
-      <ProductList items={items} />
-    </>
-  );
+  return <ProductList items={items} />;
 }
